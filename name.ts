@@ -1,18 +1,18 @@
 import { getRandomArrayItem, getRandomNumber } from './utils.ts'
-import { female, male, surnames } from './raw/names.json' assert { type: 'json' }
+import names from './raw/names.json' assert { type: 'json' }
 
 /** Gets a random male name */
 export function getRandomMaleName() {
-	const firstName = getRandomArrayItem(male)
-	const lastName = getRandomArrayItem(surnames)
+	const firstName = getRandomArrayItem(names.male)
+	const lastName = getRandomArrayItem(names.surnames)
 
 	return { firstName, lastName }
 }
 
 /** Gets a random female name */
 export function getRandomFemaleName() {
-	const firstName = getRandomArrayItem(female)
-	const lastName = getRandomArrayItem(surnames)
+	const firstName = getRandomArrayItem(names.female)
+	const lastName = getRandomArrayItem(names.surnames)
 
 	return { firstName, lastName }
 }
